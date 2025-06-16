@@ -29,7 +29,7 @@
 
   <!-- Banner Principal -->
   <section class="w-full overflow-hidden">
-    <img src="https://static.nike.com.br/General/Temp/ImagemPrincipal.png" alt="Banner" class="w-full object-cover">
+    <img src="{{ url_for('static', filename='img/banner.jpg') }}" alt="Banner" class="w-full object-cover">
   </section>
 
   <!-- Seção de Destaques com texto -->
@@ -43,16 +43,16 @@
   <!-- Categorias (4 blocos) -->
   <section class="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-7xl mx-auto px-4">
     <div class="relative">
-      <img src="https://static.nike.com.br/General/Categoria1.jpg" alt="Cat1" class="w-full rounded">
+      <img src="{{ url_for('static', filename='img/cat1.jpg') }}" alt="Cat1" class="w-full rounded">
     </div>
     <div class="relative">
-      <img src="https://static.nike.com.br/General/Categoria2.jpg" alt="Cat2" class="w-full rounded">
+      <img src="{{ url_for('static', filename='img/cat2.jpg') }}" alt="Cat2" class="w-full rounded">
     </div>
     <div class="relative">
-      <img src="https://static.nike.com.br/General/Categoria3.jpg" alt="Cat3" class="w-full rounded">
+      <img src="{{ url_for('static', filename='img/cat3.jpg') }}" alt="Cat3" class="w-full rounded">
     </div>
     <div class="relative">
-      <img src="https://static.nike.com.br/General/Categoria4.jpg" alt="Cat4" class="w-full rounded">
+      <img src="{{ url_for('static', filename='img/cat4.jpg') }}" alt="Cat4" class="w-full rounded">
     </div>
   </section>
 
@@ -61,24 +61,24 @@
     <h3 class="text-2xl font-semibold mb-6">Ícones Nike</h3>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
       <div class="bg-gray-100 p-4 text-center rounded">
-        <img src="https://static.nike.com.br/General/Produto1.png" alt="Air Force 1" class="mx-auto h-32">
+        <img src="{{ url_for('static', filename='img/produto1.jpg') }}" alt="Air Force 1" class="mx-auto h-32">
         <p class="mt-2 font-semibold">Air Force 1</p>
       </div>
       <div class="bg-gray-100 p-4 text-center rounded">
-        <img src="https://static.nike.com.br/General/Produto2.png" alt="Dunk" class="mx-auto h-32">
+        <img src="{{ url_for('static', filename='img/produto2.jpg') }}" alt="Dunk" class="mx-auto h-32">
         <p class="mt-2 font-semibold">Dunk</p>
       </div>
       <div class="bg-gray-100 p-4 text-center rounded">
-        <img src="https://static.nike.com.br/General/Produto3.png" alt="Air Jordan 1" class="mx-auto h-32">
+        <img src="{{ url_for('static', filename='img/produto3.jpg') }}" alt="Air Jordan 1" class="mx-auto h-32">
         <p class="mt-2 font-semibold">Air Jordan 1</p>
       </div>
       <div class="bg-gray-100 p-4 text-center rounded">
-        <img src="https://static.nike.com.br/General/Produto4.png" alt="Air Max" class="mx-auto h-32">
+        <img src="{{ url_for('static', filename='img/produto4.jpg') }}" alt="Air Max" class="mx-auto h-32">
         <p class="mt-2 font-semibold">Air Max</p>
       </div>
     </div>
   </section>
 
-  <footer class="mt-12 text-center text-sm text-gray-400 py-6">© {{ 2025 }} Minha Loja</footer>
+  <footer class="mt-12 text-center text-sm text-gray-400 py-6">© 2025 Minha Loja</footer>
 </body>
 </html>
