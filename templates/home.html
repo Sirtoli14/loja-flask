@@ -3,37 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Loja - Home</title>
+  <title>Home - Loja</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-white text-gray-900">
-  <header class="bg-gray-100 p-4 shadow">
-    <div class="container mx-auto flex justify-between items-center">
-      <h1 class="text-xl font-bold">Minha Loja</h1>
-      <nav class="space-x-4">
-        <a href="/" class="hover:underline">Início</a>
-        <a href="/carrinho" class="hover:underline">Carrinho</a>
-        {% if session.usuario_id %}
-          <a href="/logout" class="hover:underline">Sair</a>
-        {% else %}
-          <a href="/login" class="hover:underline">Login</a>
-        {% endif %}
+  <!-- Navbar -->
+  <header class="border-b">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Logo" class="h-6">
+      <nav class="space-x-6 text-sm">
+        <a href="#" class="hover:underline">Ofertas</a>
+        <a href="#" class="hover:underline">Lançamentos</a>
+        <a href="#" class="hover:underline">Masculino</a>
+        <a href="#" class="hover:underline">Feminino</a>
+        <a href="#" class="hover:underline">Infantil</a>
+        <a href="#" class="hover:underline">SNKRS</a>
       </nav>
+      <div class="flex items-center space-x-4">
+        <input type="text" placeholder="Buscar" class="border rounded-full px-3 py-1 text-sm">
+        <span>❤️</span>
+        <span>🛒</span>
+      </div>
     </div>
   </header>
 
-  <main class="container mx-auto p-6">
-    <h2 class="text-2xl font-semibold mb-6">Produtos em destaque</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      {% for produto in produtos %}
-      <div class="border rounded-xl shadow p-4 hover:shadow-lg transition">
-        <img src="{{ produto.imagem_url }}" alt="{{ produto.nome }}" class="w-full h-48 object-cover rounded">
-        <h3 class="text-lg font-bold mt-2">{{ produto.nome }}</h3>
-        <p class="text-gray-600">R$ {{ produto.preco }}</p>
-        <a href="/produto/{{ produto.id }}" class="inline-block mt-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Ver produto</a>
-      </div>
-      {% endfor %}
+  <!-- Banner Principal -->
+  <section class="w-full overflow-hidden">
+    <img src="https://static.nike.com.br/General/Temp/ImagemPrincipal.png" alt="Banner" class="w-full object-cover">
+  </section>
+
+  <!-- Seção de Destaques com texto -->
+  <section class="text-center py-12">
+    <p class="text-sm uppercase">Vaporfly 4</p>
+    <h2 class="text-4xl font-extrabold mb-2">MÁXIMA VELOCIDADE</h2>
+    <p class="text-gray-600">O tênis que redefiniu os limites humanos — agora 10% mais leve do que antes.</p>
+    <a href="#" class="inline-block mt-4 px-6 py-2 bg-black text-white rounded-full">Ver Lançamento</a>
+  </section>
+
+  <!-- Categorias (4 blocos) -->
+  <section class="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-7xl mx-auto px-4">
+    <div class="relative">
+      <img src="https://static.nike.com.br/General/Categoria1.jpg" alt="Cat1" class="w-full rounded">
     </div>
-  </main>
+    <div class="relative">
+      <img src="https://static.nike.com.br/General/Categoria2.jpg" alt="Cat2" class="w-full rounded">
+    </div>
+    <div class="relative">
+      <img src="https://static.nike.com.br/General/Categoria3.jpg" alt="Cat3" class="w-full rounded">
+    </div>
+    <div class="relative">
+      <img src="https://static.nike.com.br/General/Categoria4.jpg" alt="Cat4" class="w-full rounded">
+    </div>
+  </section>
+
+  <!-- Produtos (4 cards) -->
+  <section class="mt-12 px-4">
+    <h3 class="text-2xl font-semibold mb-6">Ícones Nike</h3>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="bg-gray-100 p-4 text-center rounded">
+        <img src="https://static.nike.com.br/General/Produto1.png" alt="Air Force 1" class="mx-auto h-32">
+        <p class="mt-2 font-semibold">Air Force 1</p>
+      </div>
+      <div class="bg-gray-100 p-4 text-center rounded">
+        <img src="https://static.nike.com.br/General/Produto2.png" alt="Dunk" class="mx-auto h-32">
+        <p class="mt-2 font-semibold">Dunk</p>
+      </div>
+      <div class="bg-gray-100 p-4 text-center rounded">
+        <img src="https://static.nike.com.br/General/Produto3.png" alt="Air Jordan 1" class="mx-auto h-32">
+        <p class="mt-2 font-semibold">Air Jordan 1</p>
+      </div>
+      <div class="bg-gray-100 p-4 text-center rounded">
+        <img src="https://static.nike.com.br/General/Produto4.png" alt="Air Max" class="mx-auto h-32">
+        <p class="mt-2 font-semibold">Air Max</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="mt-12 text-center text-sm text-gray-400 py-6">© {{ 2025 }} Minha Loja</footer>
 </body>
 </html>
