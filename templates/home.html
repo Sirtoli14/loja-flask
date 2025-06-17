@@ -52,24 +52,30 @@
 <section class="mt-12 px-4">
   <h3 class="text-2xl font-semibold mb-6">Ícones Nike</h3>
   <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-    <div class="bg-gray-100 p-4 text-center rounded">
-      <img src="{{ url_for('static', filename='img/produto1.jpg') }}" alt="Air Force 1" class="mx-auto h-[260px] w-auto object-cover">
-      <p class="mt-2 font-semibold">Air Force 1</p>
+    
+    <div class="bg-gray-100 p-4 rounded flex flex-col items-center justify-between w-[250px] h-[350px] mx-auto">
+      <img src="{{ url_for('static', filename='img/produto1.jpg') }}" alt="Air Force 1" class="h-[260px] w-auto object-contain" />
+      <p class="mt-2 text-lg font-bold">Air Force 1</p>
     </div>
-    <div class="bg-gray-100 p-4 text-center rounded">
-      <img src="{{ url_for('static', filename='img/produto2.jpg') }}" alt="Dunk" class="mx-auto h-[260px] w-auto object-cover">
-      <p class="mt-2 font-semibold">Dunk</p>
+    
+    <div class="bg-gray-100 p-4 rounded flex flex-col items-center justify-between w-[250px] h-[350px] mx-auto">
+      <img src="{{ url_for('static', filename='img/produto2.jpg') }}" alt="Dunk" class="h-[260px] w-auto object-contain" />
+      <p class="mt-2 text-lg font-bold">Dunk</p>
     </div>
-    <div class="bg-gray-100 p-4 text-center rounded">
-      <img src="{{ url_for('static', filename='img/produto3.jpg') }}" alt="Air Jordan 1" class="mx-auto h-[260px] w-auto object-cover">
-      <p class="mt-2 font-semibold">Air Jordan 1</p>
+    
+    <div class="bg-gray-100 p-4 rounded flex flex-col items-center justify-between w-[250px] h-[350px] mx-auto">
+      <img src="{{ url_for('static', filename='img/produto3.jpg') }}" alt="Air Jordan 1" class="h-[260px] w-auto object-contain" />
+      <p class="mt-2 text-lg font-bold">Air Jordan 1</p>
     </div>
-    <div class="bg-gray-100 p-4 text-center rounded">
-      <img src="{{ url_for('static', filename='img/produto4.jpg') }}" alt="Air Max" class="mx-auto h-[260px] w-auto object-cover">
-      <p class="mt-2 font-semibold">Air Max</p>
+    
+    <div class="bg-gray-100 p-4 rounded flex flex-col items-center justify-between w-[250px] h-[350px] mx-auto">
+      <img src="{{ url_for('static', filename='img/produto4.jpg') }}" alt="Air Max" class="h-[260px] w-auto object-contain" />
+      <p class="mt-2 text-lg font-bold">Air Max</p>
     </div>
+
   </div>
 </section>
+
 
   <!-- Rodapé -->
   <footer class="mt-12 text-center text-sm text-gray-400 py-6">© {{ 2025 }} Minha Loja</footer>
